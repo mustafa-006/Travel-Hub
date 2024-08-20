@@ -1,0 +1,123 @@
+<!--register.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Hub (create account)</title>
+    <link rel="icon" href="../first-page/images/logo.jpg" type="logo">
+    <link rel="stylesheet" href="/register/register.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <section>
+      <div class="content">
+        <h1>Let's Travel The World Together!</h1>
+        <h4 class="text-green-400 font-bold">create your account</h4>
+
+        <!--الفورم اللي هاخد منه البيانات واشتغل على باسبورت-->
+    
+        <form class="max-w-md mx-auto " id="regestire" method="POST" action="http://localhost:9999/register">
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="email" name="email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-100 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-100 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="password" name="password" id="floating_password" class="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-100 dark:text-gray-100 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="password" name="repeat_password" id="floating_repeat_password" class="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                <label for="floating_repeat_password" class="peer-focus:font-medium absolute text-sm text-gray-100 dark:text-gray-100 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm password</label>
+            </div>
+            <div class="grid md:grid-cols-2 md:gap-6">
+              <div class="relative z-0 w-full mb-5 group">
+                  <input type="text" name="firstName" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                  <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-100 dark:text-gray-100 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
+              </div>
+              <div class="relative z-0 w-full mb-5 group">
+                  <input type="text" name="lastName" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                  <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-100 dark:text-gray-100 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 md:gap-6">
+              <div class="relative z-0 w-full mb-5 group">
+                <input type="tel" pattern="0[0-9]{10}" name="phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+                  <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-100 dark:text-gray-100 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (012-3456-7890)</label>
+              </div>
+
+              <label for="country" class="text-green-400 font-bold">Country</label><span class="text-green-400 font-bold">enter your country</span>      
+           
+              <div class="field">
+                <input type="text"  name="country" class="country" placeholder="Enter your country" />
+                <div class="line"></div>
+              </div>
+              
+              
+            </div>
+            <button type="submit" class='glowing-btn'><span class='glowing-txt'>su<span class='faulty-letter'>b</span>mit</span></button>
+          </form>
+          <!--نهاية الفورم-->
+      </div>
+
+
+<!-- the swiper-->      
+
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/register/images/moscow.jpg" />
+            <div class="cost">from $230 per group</div>
+            <div class="overlay">
+              <h1>Walking Tour in moscow</h1>
+              <p>
+                Discover what you did not know: It is Russia, my friend. Let me take you with me on a visit to this great Russian bear, and we will visit Moscow together
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="/register/images/cal.jpg" />
+            <div class="cost">from $380 per group</div>
+            <div class="overlay">
+              <h1>california Guided Tour</h1>
+              <p>
+                Let's go on a trip to the United States, especially to Florida, the home of many Hollywood stars. What a wonderful state, don't miss the opportunity.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="/register/images/china.jpg" />
+            <div class="cost dark-text">from $99 per adult</div>
+            <div class="overlay">
+              <h1>china (shanghai) Tour</h1>
+              <p>
+                Let's go to a populated city with a population of more than 20 million people. Maybe you won't feel lonely there. Let's try this great trip to China.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="/register/images/tokyo.png" />
+            <div class="cost dark-text">from $117 per adult</div>
+            <div class="overlay">
+              <h1>Japan Panoramic Tours</h1>
+              <p>
+                Embark on a magical journey through Tokyo by discovering the
+                beauty of the city as cherry blossom trees paint the streets in
+                hues of pink.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/register/register.js"></script>
+</body>
+</html>

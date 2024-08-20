@@ -1,0 +1,290 @@
+#profile-footer {
+    background-color: #f8fafc;
+}
+
+#edit-profile-title {
+    color: #4b5563; 
+}
+
+#profile-form-section {
+    background-color: #f8fafc; 
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+#form-content {
+    margin-top: 1.25rem;
+}
+
+#profile-image-upload,
+#cover-photo-upload {
+    background-color: #f0f9ff;
+}
+
+#profile-image-upload:hover,
+#cover-photo-upload:hover {
+    background-color: #e0f2fe;
+}
+
+#cv-input,
+#address-input {
+    border-color: #d1d5db; 
+}
+
+#cv-input:focus,
+#address-input:focus {
+    border-color: #3b82f6; 
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3); 
+}
+
+.glowing-btn {
+  border: none;
+  outline: none;
+  background: #E97F02;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px; 
+  font-weight: bold; 
+}
+
+.glowing-btn .glowing-txt {
+  position: relative;
+  z-index: 1;
+}
+
+.glowing-btn .faulty-letter {
+  color: #f5f5f5; 
+  font-weight: bold;
+}
+
+.glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.3) 0%, rgba(255, 165, 0, 0) 80%); 
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: rgba(255, 165, 0, 0.5); 
+  box-shadow: 0 0 2em 0.2em rgba(255, 165, 0, 0.5); 
+  transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+  animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+  animation: none;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.glowing-btn:hover::before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+
+.glowing-btn:hover::after {
+  opacity: 1;
+}
+
+@keyframes glowing {
+  0% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+  50% {
+      transform: scale(1.2);
+      opacity: 0.3;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+}
+
+@keyframes faulty-flicker {
+  0% {
+      opacity: 0.1;
+  }
+  2% {
+      opacity: 0.1;
+  }
+  4% {
+      opacity: 0.5;
+  }
+  19% {
+      opacity: 0.5;
+  }
+  21% {
+      opacity: 0.1;
+  }
+  23% {
+      opacity: 1;
+  }
+  80% {
+      opacity: 0.5;
+  }
+  83% {
+      opacity: 0.4;
+  }
+  87% {
+      opacity: 1;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+      opacity: 0.1;
+  }
+  2% {
+      opacity: 1;
+  }
+  8% {
+      opacity: 0.1;
+  }
+  9% {
+      opacity: 1;
+  }
+  12% {
+      opacity: 0.1;
+  }
+  20% {
+      opacity: 1;
+  }
+  25% {
+      opacity: 0.3;
+  }
+  30% {
+      opacity: 1;
+  }
+  70% {
+      opacity: 0.7;
+  }
+  72% {
+      opacity: 0.2;
+  }
+  77% {
+      opacity: 0.9;
+  }
+  100% {
+      opacity: 0.9;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+      opacity: 0.1;
+  }
+  2% {
+      opacity: 1;
+  }
+  4% {
+      opacity: 0.1;
+  }
+  8% {
+      opacity: 1;
+  }
+  70% {
+      opacity: 0.7;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.cover-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  position: absolute;
+}
+
+
+
+.cover-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  position: absolute;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back {
+  --c: #fff; 
+  
+  background: 
+    linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+    #E97F02; 
+  color: #0000;
+  border: none;
+  transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+  text-shadow: 
+    calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+    calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+  outline-offset: .1em;
+  transition: 0.3s;
+}
+.back:hover,
+.back:focus-visible {
+  --_p: 0%;
+  --_i: 1;
+}
+.back:active {
+  text-shadow: none;
+  color: var(--c);
+  box-shadow: inset 0 0 9e9q #0005;
+  transition: 0s;
+}
+
+.back {
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  font-size: 1.9rem;
+  margin: 0;
+  cursor: pointer;
+  padding: .1em .3em;
+  position: absolute; 
+  top: 20px; 
+  left: 20px; 
+  z-index: 10; 
+}

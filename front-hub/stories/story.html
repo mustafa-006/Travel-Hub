@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Hub (Stories)</title>
+    <link rel="icon" href="../first-page/images/logo.jpg">
+    <link rel="stylesheet" href="story.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <h2>Share your story with users for 24 hours</h2>
+    <button class="back" onclick="totimeline()">BACK</button>
+    
+    <button id="createStoryBtn" class="glowing-btn"><span class="glowing-txt">Create Story</span></button>
+
+    <div class="post-container" id="postContainer" style="display: none;">
+        <textarea id="storyText" placeholder="Write into your story..."></textarea>
+        <div class="d-flex">   
+            <label class="custom-file-upload">
+                <input type="file" id="storyImage" accept="image/*">Choose Image
+            </label>
+            <button id="post"><span class="glowing-txt">po<span class="faulty-letter">s</span>t</span></button>
+        </div>
+    </div>
+    <div id="storiesContainer" class="stories-container"></div>
+    
+
+    <script src="story.js"></script>
+</body>
+</html>
