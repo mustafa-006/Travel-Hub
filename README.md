@@ -60,6 +60,10 @@ This project utilizes the following languages and technologies:
 - **JavaScript**: Used extensively for both client-side and server-side development.
 - **CSS**: Styled with Tailwind CSS and Bootstrap for responsive and modern designs.
 
+## Languages Used
+
+- ![JavaScript](https://img.shields.io/badge/JavaScript-99.6%25-yellow)
+- ![Other](https://img.shields.io/badge/Other-0.4%25-lightgrey)
 
 
 
