@@ -62,8 +62,8 @@ This project utilizes the following languages and technologies:
 
 ## Languages Used
 
-- ![JavaScript](https://img.shields.io/badge/JavaScript-90%25-yellow)
-- ![CSS](https://img.shields.io/badge/CSS-10%25-purple)
+- ![JavaScript](https://img.shields.io/badge/JavaScript-92%25-yellow)
+- ![CSS](https://img.shields.io/badge/CSS-8%25-purple)
 
 
 
