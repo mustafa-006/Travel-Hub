@@ -401,7 +401,11 @@ document.getElementById('postButton').addEventListener('click', function() {
         }
     }
 });
-
+function clearPosts() {
+    const container = document.getElementById('container'); 
+    container.innerHTML = '';
+}
+        clearPosts();
         loadPosts(); 
 
  // the routes
